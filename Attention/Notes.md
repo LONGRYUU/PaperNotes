@@ -4,8 +4,33 @@
 
 #### Number of Sequences
 
-**distinctive**：Encoder和Decoder的编码器和解码器对应的隐藏状态属于不同的序列
+**distinctive**：编码器和解码器对应的隐藏状态属于不同的序列
 
 例子：机器翻译，文本摘要，图像描述，语音识别。
 
-co-attention：
+**co-attention**：同时处理多个输入序列，共同学习其权重以捕获其中的内在联系。
+
+例子：Visual Question Answering，图像特征和问题向量互相引导对方的Attention权重学习
+
+**self-attention**：编码器和解码器对应的隐藏状态属于相同的序列，即学习输入序列中词语间的相关性
+
+例子：推荐系统，文本分类
+
+#### Number of Abstractions
+
+**single-level**：仅对输入进行attention权重学习
+
+**multi-level**：按照抽象层次，多次运用attention机制
+
+例子：top-down attention，bottom-up attention，attention-via-attention，HAM：捕获文档中重要的句子，捕获句子中重要的单词
+
+#### Number of Positions
+
+**soft-attention**：在输入上全局地进行学习，获取权重
+
+**hard-attention**：对输入进行随机采样，然后进行权重学习，降低了计算开销，但是使得框架不可微，难以优化
+
+**local-attention**：介于soft和hard-attention机制之间，先选择进行attention学习的区域，然后在该区域进行soft-attention权重学习
+
+#### Number of Representations
+
