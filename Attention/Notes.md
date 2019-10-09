@@ -1,5 +1,31 @@
 # An Attentive Survey of Attention Models
 
+# An Attentive Survey of Attention Models
+
+#### 优点：
+
+- 性能优良，在多个任务上达到SOTA
+- 增强模型的可解释性
+- 克服随着输入长度增长带来的性能下降
+- 提高序列的计算效率
+
+
+
+#### 传统模型的问题：
+
+- 将长序列压缩到固定长度的序列可能引起信息的损失
+- 难以在输入和输出之间进行有效对齐
+
+对于seq2seq任务，输出期望被输入的特定部分影响更多，而模型缺少这样一个选择相关输入的机制。
+
+
+
+#### Attention Model：
+
+学习每个encoder与decoder的隐藏状态h与s直接的关联性，从而为每个h分配权值，将所有h向量加权作为decoder输入
+
+
+
 ### 模型类别
 
 #### Number of Sequences
