@@ -60,3 +60,19 @@
 
 #### Number of Representations
 
+**multi-representational**：将输入进行多重表示，用attention机制为不同的表征分配权重。
+
+**multi-dimensional**：在输入的特征向量上进行权重分配，根据上下文环境为词语分配权重，解决一词多译的问题
+
+### 使用Attention的网络结构
+
+#### Encoder-Decoder
+
+attention模型能够将各种尺寸的输入转化为固定大小的向量，从而使输入和输出解耦。例如图像描述、VQA等；对于离散的输出，譬如Pointer Network，使用attention模型来给出各个输入点被选择的权重作为其概率。
+
+#### Memory Network
+
+#### Networks without RNNs
+
+Position-wise FNN,Multi-head self-attention
+
