@@ -1,6 +1,6 @@
 # An Attentive Survey of Attention Models
 
-# An Attentive Survey of Attention Models
+
 
 #### 优点：
 
@@ -75,4 +75,20 @@ attention模型能够将各种尺寸的输入转化为固定大小的向量，�
 #### Networks without RNNs
 
 Position-wise FNN,Multi-head self-attention
+
+
+
+# Spatial Transformer Networks
+
+获得表示的空间变换不变性
+
+### Localization Network
+
+根据输入的特征图获取变换的参数（回归）
+
+### Parameterized Sampling Grid
+
+使用上一层网络生成的参数，获取采样网格区域对应的输入区域，
+
+### Differentiable Image Sampling
 
