@@ -78,7 +78,11 @@ Position-wise FNN,Multi-head self-attention
 
 
 
+
+
 # Spatial Transformer Networks
+
+### Spatial Attention
 
 获得表示的空间变换不变性
 
@@ -92,3 +96,20 @@ Position-wise FNN,Multi-head self-attention
 
 ### Differentiable Image Sampling
 
+
+
+
+
+# Squeeze-and-Excitation Networks
+
+### Channel Attention
+
+将卷积视为信号的分解，将时域上的一个信号分解为频域上的多个分量
+
+不同的分量（通道）的重要程度显然是不一样的，所以可以对不同的channel分配不同的权重
+
+浅层次的SE结构着重于关注低层次、类别不明的特征，而位于深层次的SE结构则会关注类别明确的特定特征。
+
+#### Deeper architectures
+
+skip connections, highway networks,
