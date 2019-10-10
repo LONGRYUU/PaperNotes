@@ -112,4 +112,27 @@ Position-wise FNN,Multi-head self-attention
 
 #### Deeper architectures
 
-skip connections, highway networks,
+resnet skip connections, highway networks,multi-branch convs,grouped convs
+
+#### Algorithmic Architecture Search
+
+SE块可以用于加速强化学习
+
+### 模型
+
+Transform(卷积) ->squeeze->excitation
+
+#### squeeze
+
+对全局信息进行嵌入编码
+
+通过对每个通道的特征图进行全局平均池化，将所有局部信息整合到一起，输出一个C维的向量
+
+#### excitation
+
+学习通道间的非线性关系，并且保证可以对多个通道分配权重，而不仅仅像one-hot一样关注一个通道，输出为C维向量S
+
+#### scale
+
+将输出的S每一维的权重用于放缩对应的每一个通道的特征图，从而得到模块的最终输出
+
