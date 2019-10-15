@@ -12,3 +12,13 @@
 - 数据集：数据集大多未公开，并且没有标准
 - 没有明确的评价指标
 
+处理过程：
+
+resize， crop， 从RGB转化到cylindrical coordinate color space，进行语义分割
+
+因素：
+
+- 颜色：饱和度以及亮度，色调，色彩，颜色统计，Itten Contrast
+- 纹理：wavelet-based features，tamura纹理特征（粗糙度，对比度，方向性），灰度共生矩阵GLCM，
+- 成分(composition)：详细程度，低的景深，主要的线条
+- 内容(content)：人脸表情，皮肤
