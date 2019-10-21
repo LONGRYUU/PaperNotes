@@ -22,3 +22,16 @@ resize， crop， 从RGB转化到cylindrical coordinate color space，进行语�
 - 纹理：wavelet-based features，tamura纹理特征（粗糙度，对比度，方向性），灰度共生矩阵GLCM，
 - 成分(composition)：详细程度，低的景深，主要的线条
 - 内容(content)：人脸表情，皮肤
+
+
+
+# StyleNet: Generating Attractive Visual Captions with Styles
+
+核心思想：将语言生成模块的LSTM中的输入权重矩阵W分解为USV，其中S可以替换为不同风格的因素。
+
+多任务训练：
+
+- 根据Image Caption训练集，生成事实描述；
+- 作为语言模型训练
+
+两个任务的参数共享，除了上述的S矩阵
