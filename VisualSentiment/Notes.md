@@ -27,7 +27,7 @@ resize， crop， 从RGB转化到cylindrical coordinate color space，进行语�
 
 # StyleNet: Generating Attractive Visual Captions with Styles
 
-核心思想：将语言生成模块的LSTM中的输入权重矩阵W分解为USV，其中S可以替换为不同风格的因素。
+核心思想：factored-LSTM，将语言生成模块的LSTM中的输入权重矩阵W分解为USV，其中S可以替换为不同风格的因素。
 
 多任务训练：
 
@@ -35,3 +35,20 @@ resize， crop， 从RGB转化到cylindrical coordinate color space，进行语�
 - 作为语言模型训练
 
 两个任务的参数共享，除了上述的S矩阵
+
+
+
+# “Factual” or “Emotional”: Stylized ImageCaptioning with Adaptive Learning andAttention
+
+factual-style LSTM
+
+核心思想：用不同的参数表示factual和style因素，获取二者间的内在联系，使用attention机制将二者结合在一起。即保留原始的Wx和Wh作为事实描述参数，而降Sx和Sh作为风格化参数，用一个动态attention权重在每个时间点将二者加权求和
+
+adaptive learning：类似Knowing when to look，采用动态的attention机制，根据当前的词汇来决定是否应用attention机制。
+
+二阶段训练：先冻结S矩阵，仅针对事实性描述进行训练；第二阶段则使用风格化描述训练S
+
+为了解决风格化描述不足的问题，设计了特殊的损失函数，当输出词语是风格化相关词语时，用MLE损失衡量；否则用KL散度度量生成词语与事实性模型生成词语的差别，期望KL散度小。
+
+
+
