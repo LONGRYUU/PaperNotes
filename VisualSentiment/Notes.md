@@ -52,3 +52,9 @@ adaptive learning：类似Knowing when to look，采用动态的attention机制�
 
 
 
+# SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text
+
+
+
+将语义信息和风格信息分离
+
