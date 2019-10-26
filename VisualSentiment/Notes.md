@@ -23,6 +23,24 @@
 >>>>>>> - 成分(composition)：详细程度，低的景深，主要的线条
 >>>>>>> - 内容(content)：人脸表情，皮肤
 >>>>>>>
+>>>>>>> 
+>>>>>>>
+>>>>>>> # Affective Image Content Analysis: A Comprehensive Survey
+>>>>>>>
+>>>>>>> 两大问题：情感gap和直觉的主观性
+>>>>>>>
+>>>>>>> 两种主要表示：CES和DES
+>>>>>>>
+>>>>>>> CES：将情感用一些固定的类别标签表示
+>>>>>>>
+>>>>>>> DES：用2维或3维笛卡尔空间表示
+>>>>>>>
+>>>>>>> 特征提取：手工设计，深度网络学习
+>>>>>>>
+>>>>>>> 情感分布学习
+>>>>>>>
+>>>>>>> 离散分布学习：SSL，WMMSSL，CPNN，WMMCPNN
+>>>>>>>
 >>>>>>> # StyleNet: Generating Attractive Visual Captions with Styles
 >>>>>>>
 >>>>>>> 核心思想：factored-LSTM，将语言生成模块的LSTM中的输入权重矩阵W分解为USV，其中S可以替换为不同风格的因素。
@@ -33,6 +51,8 @@
 >>>>>>> - 作为语言模型训练
 >>>>>>>
 >>>>>>> 两个任务的参数共享，除了上述的S矩阵
+>>>>>>>
+>>>>>>> 
 >>>>>>>
 >>>>>>> # “Factual” or “Emotional”: Stylized ImageCaptioning with Adaptive Learning andAttention
 >>>>>>>
@@ -46,6 +66,10 @@
 >>>>>>>
 >>>>>>> 为了解决风格化描述不足的问题，设计了特殊的损失函数，当输出词语是风格化相关词语时，用MLE损失衡量；否则用KL散度度量生成词语与事实性模型生成词语的差别，期望KL散度小。
 >>>>>>>
+>>>>>>> 
+>>>>>>>
 >>>>>>> # SemStyle: Learning to Generate Stylised Image Captions using Unaligned Text
+>>>>>>>
+>>>>>>> 
 >>>>>>>
 >>>>>>> 将语义信息和风格信息分离
