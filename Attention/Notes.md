@@ -136,3 +136,7 @@ Transform(卷积) ->squeeze->excitation
 
 将输出的S每一维的权重用于放缩对应的每一个通道的特征图，从而得到模块的最终输出
 
+
+
+# Knowing When to Look: Adaptive Attention via A Visual Sentinel for Image Captioning
+
