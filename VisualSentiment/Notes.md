@@ -22,3 +22,21 @@ resize， crop， 从RGB转化到cylindrical coordinate color space，进行语�
 - 纹理：wavelet-based features，tamura纹理特征（粗糙度，对比度，方向性），灰度共生矩阵GLCM，
 - 成分(composition)：详细程度，低的景深，主要的线条
 - 内容(content)：人脸表情，皮肤
+
+
+
+# Affective Image Content Analysis: A Comprehensive Survey
+
+两大问题：情感gap和直觉的主观性
+
+两种主要表示：CES和DES
+
+CES：将情感用一些固定的类别标签表示
+
+DES：用2维或3维笛卡尔空间表示
+
+特征提取：手工设计，深度网络学习
+
+情感分布学习
+
+离散分布学习：SSL，WMMSSL，CPNN，WMMCPNN
